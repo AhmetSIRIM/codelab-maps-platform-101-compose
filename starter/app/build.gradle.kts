@@ -93,13 +93,13 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:$hiltVersion")
     implementation(kotlin("reflect"))
 
-    // Google Maps SDK -- these are here for the data model.  Remove these dependencies and replace
-    // with the compose versions.
-    implementation("com.google.android.gms:play-services-maps:18.2.0")
-    // KTX for the Maps SDK for Android library
-    implementation("com.google.maps.android:maps-ktx:5.0.0")
-    // KTX for the Maps SDK for Android Utility Library
-    implementation("com.google.maps.android:maps-utils-ktx:5.0.0")
+    // Google Maps Compose library
+    val mapsComposeVersion = "4.4.1"
+    implementation("com.google.maps.android:maps-compose:$mapsComposeVersion")
+    // Google Maps Compose utility library
+    implementation("com.google.maps.android:maps-compose-utils:$mapsComposeVersion")
+    // Google Maps Compose widgets library
+    implementation("com.google.maps.android:maps-compose-widgets:$mapsComposeVersion")
 }
 
 secrets {
